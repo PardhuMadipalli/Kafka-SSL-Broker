@@ -45,5 +45,5 @@ sed -i "s|<DIRNAME>|${KAFKA_SSL_DIR}|g" ./config/serverssl.properties
 
 $KAFKA_HOME/bin/kafka-server-start.sh -daemon $KAFKA_HOME/config/serverssl.properties && \
 echo -e "***	SSL listener runs on port 9093, PLAINTEXT listener runs on port 9094	***"
-echo -e "following processes runs at 9093"
+echo -e "following process runs at 9093 \nusing netstat -tulnp | grep 9093"
 netstat -tulnp | grep 9093
